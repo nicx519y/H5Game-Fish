@@ -1,9 +1,38 @@
 body, html {
-	padding: 0;
-	margin: 0;
-	/* font-size: 0; */
-	/* line-height: 0; */
-	/* overflow: hidden; */
+    padding: 0;
+    margin: 0;
+    /* font-size: 0; */
+    /* line-height: 0; */
+    /* overflow: hidden; */
 }
 
+/*************************
+因为本页面进行了页面缩放
+充值组件样式覆盖
+**************************/
+.__modal-content {
+    min-width: 80%;
+    border-radius: 12px;
+    border: solid 4px #2D3138;
+    padding: 20px;
+    font-size: 18px;
+}
 
+.__modal-wraper .bean-cashier-content .title-wraper .dialog-icon-getbean {
+    left: 222px;
+}
+.__modal-wraper .buy-dialog .title-wraper .dialog-icon-getbean {
+    left: 222px;
+}
+.__modal-wraper .bean-cashier-content .list-wraper .item-wraper {
+    padding: 16px 0px;
+}
+.__modal-wraper .bean-cashier-content .list-wraper .item-wraper button {
+    top: 12px;
+    padding: 10px 18px;
+    border-radius: 4px;
+}
+.__modal-wraper .buy-dialog button {
+    font-size: 16px;
+    padding: 12px 20px;
+}
