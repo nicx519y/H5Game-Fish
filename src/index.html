@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta id="view" name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+		<meta name="apple-mobile-web-app-capable" content="yes" />    
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+		<meta name="format-detection" content="telephone=yes"/>
+		<meta name="msapplication-tap-highlight" content="no" />
+		<title>钓鱼</title>
+		<link type="text/css" rel="stylesheet" href="./css/style.css"/>
+		<script src="https://cdn.bootcss.com/fetch/2.0.3/fetch.min.js"></script>
+		<script src="https://www.promisejs.org/polyfills/promise-6.1.0.js"></script>
+		<script src="./lib/easeljs.js" ></script>
+		<script src="./lib/tweenjs.min.js" ></script>
+		<script src="./main.ts" ></script>
+	</head>
+<body>
+	<div id="container" >
+		<canvas id="stage-canvas" ></canvas>
+		<script>
+			document.onreadystatechange = function() {
+				if(document.readyState === 'complete') {
+					var innerWidth = window.innerWidth || window.clientWidth;
+					var innerHeight = window.innerHeight || window.clientHeight;
+					var scale = innerWidth / 640;
+					// var scale = 1;
+					var canv = document.getElementById('stage-canvas');
+					canv.width = innerWidth / scale;  
+					canv.height = innerHeight / scale;  
+					setTimeout(function() {
+						document.getElementById("view").setAttribute('content','user-scalable=yes, width=device-width, minimum-scale='+scale+', initial-scale='+scale+', maximum-scale='+scale);
+					}, 0);
+					console.log('window innerWidth: ', window.innerWidth);
+					console.log('viewport scale: ', scale);
+					// alert(document.getElementById("view").getAttribute('content'));
+				}
+			};
+
+		</script>
+	</div>
+</body>
+</html>
